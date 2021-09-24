@@ -12,15 +12,15 @@
 // });
 // }
 
-module.exports = function() {
-  process.stdout.write("prompt > ");
-process.stdin.on("data", (data) => {
-	const cmd = data.toString().trim();
-	// process.stdout.write("you typed: " + cmd);
-	process.stdout.write("\nprompt > ");
+module.exports = function () {
+	process.stdout.write("prompt > ");
+	process.stdin.on("data", (data) => {
+		const cmd = data.toString().trim();
+		// process.stdout.write("you typed: " + cmd);
+		process.stdout.write("\nprompt > ");
 
-if (cmd === 'pwd') {
-	process.stdout.write(process.cwd());
-}
-});
-}
+		if (cmd === "pwd") {
+			process.stdout.write(process.cwd());
+		}
+	});
+};
